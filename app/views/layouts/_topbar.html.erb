@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+  <a class="nav-link" href="/"><%= image_tag("CGSlogo.png", size:"78x35") %></a>
+  <a class="navbar-brand" href="/">CGPROYS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <% if (user_signed_in?) %>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Resources</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Calendar</a>         
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Messages</a>         
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Chat</a>         
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Add
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Project</a>
+            <a class="dropdown-item" href="#">Task</a>
+            <a class="dropdown-item" href="#">Milestone</a>
+          </div>
+        </li>      
+      </ul>
+      <div class="dropdown user">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= image_tag('user.png', :size=>'30x30') %>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class=>"dropdown-item" %>
+            <%= link_to "Change Pwd", edit_user_registration_path, :class=>"dropdown-item" %>
+            <%= link_to "Setting", "#", :class=>"dropdown-item" %>
+        </div>
+      </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    <% end %>
+  </div>
+</nav>

@@ -1,2 +1,15 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="home">
+	
+<h1>Welcome to CGPROYS</h1>
+	<p>Aplicación para la gestión de proyectos </p>
+
+
+	<% if !current_user %>
+
+		<%= link_to "Please LOGIN", new_user_session_path %>
+		<br/>
+		or click
+		<%= link_to "HERE", new_user_registration_path %>
+		if you are not registered:
+	<% end %>
+</div>
