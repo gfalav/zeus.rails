@@ -1,0 +1,2 @@
+rails g scaffold Company name:string website:string email:string industry:string phone:string address:text zipcode:string country:integer profile:text emailmng:string
+rails g scaffold Userdetail user:references name:string company:references phone:string address:string usrphoto:string
