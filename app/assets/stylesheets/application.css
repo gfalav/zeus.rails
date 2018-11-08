@@ -15,9 +15,9 @@
  *= require jquery-ui
  */
 body {
-font-family: 'Open Sans Condensed', sans-serif;
-margin-left: 8px;
-margin-right: 8px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 .pie {
@@ -34,7 +34,7 @@ margin-right: 8px;
 
 .principal {
 	font-size: 1.0em;
-	min-height: 800px;
+	min-height: 600px;
 }
 
 .user {
