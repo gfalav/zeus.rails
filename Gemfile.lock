@@ -93,6 +93,8 @@ GEM
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    jquery-ui-rails (6.0.1)
+      railties (>= 3.2.16)
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -208,6 +210,7 @@ DEPENDENCIES
   devise
   duktape
   jbuilder (~> 2.5)
+  jquery-ui-rails
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.1)
