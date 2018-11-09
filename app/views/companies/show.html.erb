@@ -46,9 +46,9 @@
 </p>
 
 <p>
-  <strong>Emailmng:</strong>
+  <strong>Manager Email:</strong>
   <%= @company.emailmng %>
 </p>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<%= link_to 'Edit', edit_company_path(@company),:class=>"btn btn-warning" %> |
+<%= link_to 'Back', companies_path,:class=>"btn btn-secondary" %>

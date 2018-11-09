@@ -11,57 +11,65 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
 
-  <div class="field">
-    <%= form.label :website %>
-    <%= form.text_field :website %>
-  </div>
+  <div class="row">
+    <div class="col-sm">
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
+      <div class="form-group">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control form-control-sm" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :industry %>
-    <%= form.text_field :industry %>
-  </div>
+      <div class="form-group">
+        <%= form.label :website %>
+        <%= form.text_field :website, class: "form-control form-control-sm" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
-  </div>
+      <div class="form-group">
+        <%= form.label :email %>
+        <%= form.text_field :email, class: "form-control form-control-sm" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_area :address %>
-  </div>
+      <div class="form-group">
+        <%= form.label :industry %>
+        <%= form.text_field :industry, class: "form-control form-control-sm" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :zipcode %>
-    <%= form.text_field :zipcode %>
-  </div>
+      <div class="form-group">
+        <%= form.label :phone %>
+        <%= form.text_field :phone, class: "form-control form-control-sm" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :country %>
-    <%= form.number_field :country %>
-  </div>
+      <div class="form-group">
+        <%= form.label :address %>
+        <%= form.text_area :address, class: "form-control form-control-sm" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :profile %>
-    <%= form.text_area :profile %>
-  </div>
+      <div class="form-group">
+        <%= form.label :zipcode %>
+        <%= form.text_field :zipcode, class: "form-control form-control-sm" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :emailmng %>
-    <%= form.text_field :emailmng %>
-  </div>
+      <div class="form-group">
+        <%= form.label :country %>
+        <%= form.number_field :country, class: "form-control form-control-sm" %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit %>
+      <div class="form-group">
+        <%= form.label :profile %>
+        <%= form.text_area :profile, class: "form-control form-control-sm" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label "Manager Email" %>
+        <%= form.text_field :emailmng, class: "form-control form-control-sm" %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Send", :class=>"btn btn-danger" %>
+      </div>
+    </div>
+    <div class="col-sm">
+    </div>
   </div>
 <% end %>

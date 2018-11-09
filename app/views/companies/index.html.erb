@@ -2,44 +2,11 @@
 
 <h1>Companies</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Website</th>
-      <th>Email</th>
-      <th>Industry</th>
-      <th>Phone</th>
-      <th>Address</th>
-      <th>Zipcode</th>
-      <th>Country</th>
-      <th>Profile</th>
-      <th>Emailmng</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="list-group">
     <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.name %></td>
-        <td><%= company.website %></td>
-        <td><%= company.email %></td>
-        <td><%= company.industry %></td>
-        <td><%= company.phone %></td>
-        <td><%= company.address %></td>
-        <td><%= company.zipcode %></td>
-        <td><%= company.country %></td>
-        <td><%= company.profile %></td>
-        <td><%= company.emailmng %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <%= link_to "Company: " + company.name + "   -   email: " + company.email, company_path(company), :class=>"list-group-item list-group-item-action" %>
     <% end %>
-  </tbody>
-</table>
-
+  </div>
 <br>
 
-<%= link_to 'New Company', new_company_path %>
+<%= link_to 'New Company', new_company_path, :class=>"btn btn-success" %>
