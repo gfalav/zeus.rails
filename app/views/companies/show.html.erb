@@ -1,55 +1,66 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @company.name %>
-  <%= image_tag @company.logoimg_url.to_s %>
-</p>
+<div class="row">
+  <div class="col-sm">
+    <p>
+      <h1>
+        <strong>Name:</strong>
+        <%= @company.name %><br/>
+        <%= image_tag @company.logoimg_url.to_s %>
+      </h1>
+    </p>
+  </div>
 
-<p>
-  <strong>Website:</strong>
-  <%= @company.website %>
-</p>
+  <div class="col-sm compshow">
+    <p>
+      <strong>Website:</strong>
+      <%= @company.website %>
+    </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @company.email %>
-</p>
+    <p>
+      <strong>Email:</strong>
+      <%= @company.email %>
+    </p>
 
-<p>
-  <strong>Industry:</strong>
-  <%= @company.industry %>
-</p>
+    <p>
+      <strong>Phone:</strong>
+      <%= @company.phone %>
+    </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @company.phone %>
-</p>
+    <p>
+      <strong>Address:</strong>
+      <%= @company.address %>
+    </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @company.address %>
-</p>
+    <p>
+      <strong>Zipcode:</strong>
+      <%= @company.zipcode %>
+    </p>
 
-<p>
-  <strong>Zipcode:</strong>
-  <%= @company.zipcode %>
-</p>
+    <p>
+      <strong>Country:</strong>
+      <%= @company.country %>
+    </p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @company.country %>
-</p>
+    <p>
+      <strong>Industry:</strong>
+      <%= @company.industry %>
+    </p>
 
-<p>
-  <strong>Profile:</strong>
-  <%= @company.profile %>
-</p>
+    <p>
+      <strong>Profile:</strong>
+      <%= @company.profile %>
+    </p>
 
-<p>
-  <strong>Manager Email:</strong>
-  <%= @company.emailmng %>
-</p>
+    <p>
+      <strong>Manager Email:</strong>
+      <%= @company.emailmng %>
+    </p>
+
+  </div>
+</div>
+
+
 
 <%= link_to 'Edit', edit_company_path(@company),:class=>"btn btn-warning" %> |
 <%= link_to 'Teams', teams_path(@company),:class=>"btn btn-info" %> |
