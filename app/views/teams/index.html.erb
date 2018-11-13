@@ -2,32 +2,10 @@
 
 <h1>Teams</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Department</th>
-      <th>Company</th>
-      <th>Owner</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @teams.each do |team| %>
-      <tr>
-        <td><%= team.name %></td>
-        <td><%= team.department %></td>
-        <td><%= team.company.name %></td>
-        <td><%= team.owner.email %></td>
-        <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <%= link_to "Team: " + team.name + " from " + team.department + " - " + team.company.name + " Team leader " + team.owner.email, team_path(team), :class=>"list-group-item list-group-item-action" %>
     <% end %>
-  </tbody>
-</table>
 
 <br>
 
-<%= link_to 'New Team', new_team_path %>
+<%= link_to 'New Team', new_team_path, :class=>"btn btn-primary" %>

@@ -17,7 +17,7 @@ class TeamsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create team" do
     assert_difference('Team.count') do
-      post teams_url, params: { team: { company_id: @team.company_id, department: @team.department, name: @team.name, owner: @team.owner } }
+      post teams_url, params: { team: { company_id: @team.company_id, department: @team.department, name: @team.name, owner_id: @team.owner } }
     end
 
     assert_redirected_to team_url(Team.last)
@@ -34,7 +34,7 @@ class TeamsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update team" do
-    patch team_url(@team), params: { team: { company_id: @team.company_id, department: @team.department, name: @team.name, owner: @team.owner } }
+    patch team_url(@team), params: { team: { company_id: @team.company_id, department: @team.department, name: @team.name, owner_id: @team.owner } }
     assert_redirected_to team_url(@team)
   end
 
