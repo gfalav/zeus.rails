@@ -23,12 +23,12 @@
 
   <div class="form-group">
     <%= form.label :company_id %>
-    <%= form.collection_select(:company_id, Company.all, :id, :name, { class: "btn btn-secondary dropdown-toggle" }) %>
+    <%= form.collection_select(:company_id, Company.all, :id, :name, {include_blank: false}, {class: 'form-control '}) %>
   </div>
 
   <div class="form-group">
     <%= form.label :owner_id %>
-    <%= form.collection_select(:owner_id, User.all, :id, :email) %>
+    <%= form.collection_select(:owner_id, User.all, :id, :email, {include_blank: false}, {class: 'form-control '}) %>
   </div>
 
   <div class="actions">
