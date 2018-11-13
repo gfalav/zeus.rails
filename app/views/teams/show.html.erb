@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Team Name:</strong>
   <%= @team.name %>
 </p>
 
@@ -12,12 +12,12 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @team.company %>
+  <%= @team.company.name %>
 </p>
 
 <p>
-  <strong>Owner:</strong>
-  <%= @team.owner %>
+  <strong>Team Leader:</strong>
+  <%= @team.owner.email %>
 </p>
 
 <%= link_to 'Edit', edit_team_path(@team) %> |

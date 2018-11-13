@@ -18,8 +18,8 @@
       <tr>
         <td><%= team.name %></td>
         <td><%= team.department %></td>
-        <td><%= team.company %></td>
-        <td><%= team.owner %></td>
+        <td><%= team.company.name %></td>
+        <td><%= team.owner.email %></td>
         <td><%= link_to 'Show', team %></td>
         <td><%= link_to 'Edit', edit_team_path(team) %></td>
         <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
