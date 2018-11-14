@@ -37,11 +37,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :usrphoto %>
+    <%= form.label "Usr photo" %>
     <%= form.file_field :usrphoto, class: "btn btn-info" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Send", class: "btn btn-danger" %>
   </div>
 <% end %>
+
+<br>
