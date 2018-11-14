@@ -8,7 +8,7 @@ class CreateCompanies < ActiveRecord::Migration[5.2]
       t.string :phone
       t.text :address
       t.string :zipcode
-      t.integer :country
+      t.string :country
       t.text :profile
       t.string :emailmng
 

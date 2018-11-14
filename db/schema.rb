@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2018_11_10_134139) do
     t.string "phone"
     t.text "address"
     t.string "zipcode"
-    t.integer "country"
+    t.string "country"
     t.text "profile"
     t.string "emailmng"
     t.datetime "created_at", null: false

@@ -8,7 +8,7 @@ one:
   phone: MyString
   address: MyText
   zipcode: MyString
-  country: 1
+  country: MyString
   profile: MyText
   emailmng: MyString
 
@@ -20,6 +20,6 @@ two:
   phone: MyString
   address: MyText
   zipcode: MyString
-  country: 1
+  country: MyString
   profile: MyText
   emailmng: MyString

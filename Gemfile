@@ -26,6 +26,7 @@ gem 'devise'
 gem 'jquery-ui-rails'
 gem "mini_magick"
 gem 'carrierwave', '~> 1.0'
+gem 'country_select'
 
 
 # Use Redis adapter to run Action Cable in production
