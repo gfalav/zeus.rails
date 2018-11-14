@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+company = Company.create(:id => 0, :name => "No Company" )
+team = Team.create(:id => 0, :name => "No Team" )

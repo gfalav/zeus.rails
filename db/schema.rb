@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2018_11_10_134139) do
     t.string "name"
     t.string "department"
     t.bigint "company_id"
-    t.integer "owner_id"
+    t.bigint "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_teams_on_company_id"
