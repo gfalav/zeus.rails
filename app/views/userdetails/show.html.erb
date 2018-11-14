@@ -1,34 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @userdetail.user.email %>
-</p>
-
-<p>
-  <strong>Team:</strong>
-  <%= @userdetail.team.name %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @userdetail.name %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @userdetail.phone %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @userdetail.address %>
-</p>
-
-<p>
-  <strong>Usrphoto:</strong>
-  <%= image_tag(@userdetail.usrphoto_url.to_s) %>
-</p>
+<div class="row">
+  <div class="col-sm">
+    <%= image_tag(@userdetail.usrphoto_url.to_s) %><br>
+    <h1>
+      <%= @userdetail.name %>  
+    </h1>    
+  </div>
+  <div class="col-sm compshow">
+    <h2>User Info</h2>
+    <p>
+      <strong>User:</strong>
+      <%= @userdetail.user.email %>
+    </p>
+    <p>
+      <strong>Team:</strong>
+      <%= @userdetail.team.name %>
+    </p>
+    <p>
+      <strong>Phone:</strong>
+      <%= @userdetail.phone %>
+    </p>
+    <p>
+      <strong>Address:</strong>
+      <%= @userdetail.address %>
+    </p>
+  </div>
+  
+</div>
 
 <%= link_to 'Edit', edit_userdetail_path(@userdetail), class: "btn btn-warning" %> |
 <%= link_to 'Back', userdetails_path, class: "btn btn-secondary" %>
