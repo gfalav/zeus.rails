@@ -1,37 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Userdetails</h1>
+<h1>User details</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Team</th>
-      <th>Name</th>
-      <th>Phone</th>
-      <th>Address</th>
-      <th>Usrphoto</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="list-group"> 
     <% @userdetails.each do |userdetail| %>
-      <tr>
-        <td><%= userdetail.user %></td>
-        <td><%= userdetail.team %></td>
-        <td><%= userdetail.name %></td>
-        <td><%= userdetail.phone %></td>
-        <td><%= userdetail.address %></td>
-        <td><%= userdetail.usrphoto %></td>
-        <td><%= link_to 'Show', userdetail %></td>
-        <td><%= link_to 'Edit', edit_userdetail_path(userdetail) %></td>
-        <td><%= link_to 'Destroy', userdetail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <%= link_to image_tag(userdetail.usrphoto.thumb.url.to_s) + ' ' +userdetail.name + ' - (' + userdetail.user.email + ') from Team: ' + userdetail.team.name, userdetail_path(userdetail), :class=>"list-group-item list-group-item-action" %>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
 <br>
 
-<%= link_to 'New Userdetail', new_userdetail_path %>
+<%= link_to 'New Userdetail', new_userdetail_path, class: "btn btn-primary" %>

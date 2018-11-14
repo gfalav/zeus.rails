@@ -2,12 +2,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @userdetail.user %>
+  <%= @userdetail.user.email %>
 </p>
 
 <p>
   <strong>Team:</strong>
-  <%= @userdetail.team %>
+  <%= @userdetail.team.name %>
 </p>
 
 <p>
@@ -27,8 +27,8 @@
 
 <p>
   <strong>Usrphoto:</strong>
-  <%= @userdetail.usrphoto %>
+  <%= image_tag(@userdetail.usrphoto_url.to_s) %>
 </p>
 
-<%= link_to 'Edit', edit_userdetail_path(@userdetail) %> |
-<%= link_to 'Back', userdetails_path %>
+<%= link_to 'Edit', edit_userdetail_path(@userdetail), class: "btn btn-warning" %> |
+<%= link_to 'Back', userdetails_path, class: "btn btn-secondary" %>

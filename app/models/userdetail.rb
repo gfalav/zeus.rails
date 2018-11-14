@@ -1,4 +1,7 @@
 class Userdetail < ApplicationRecord
-  has_one :user
+
+	mount_uploader :usrphoto, LogousrUploader
+
+  belongs_to :user
   belongs_to :team
 end
