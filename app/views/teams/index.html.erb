@@ -3,7 +3,7 @@
 <h1>Teams</h1>
 
     <% @teams.each do |team| %>
-        <%= link_to "Team: " + team.name + " from " + team.department + " - " + team.company.name + " Team leader " + team.owner.email, team_path(team), :class=>"list-group-item list-group-item-action" %>
+        <%= link_to "Team: " + team.name + " from " + team.department + " - " + team.company.name + " - Team leader " + team.owner.email, team_path(team), :class=>"list-group-item list-group-item-action" %>
     <% end %>
 
 <br>
